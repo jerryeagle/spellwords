@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ca7p27vhj8orp"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_vgluo"]
+
+[resource]
+script = ExtResource("1_vgluo")
+Name = "dart"
+Type = 1
+Speed = 1.0

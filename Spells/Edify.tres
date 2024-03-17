@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dt063fj4ri2a8"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_xqp5p"]
+
+[resource]
+script = ExtResource("1_xqp5p")
+Name = "edify"
+Type = 2
+Speed = 1.0

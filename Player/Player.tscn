@@ -1,0 +1,23 @@
+[gd_scene load_steps=10 format=3 uid="uid://bdao338aokecr"]
+
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_5lshn"]
+[ext_resource type="Resource" uid="uid://begadj5rjyyc0" path="res://Spells/Aegis.tres" id="2_qf8vj"]
+[ext_resource type="Resource" uid="uid://bd5544jc2frwh" path="res://Spells/Afflict.tres" id="3_7q2ie"]
+[ext_resource type="Resource" uid="uid://dgawtb8nl4hlp" path="res://Spells/Alter.tres" id="4_21bui"]
+[ext_resource type="Resource" uid="uid://5g0b387rih0d" path="res://Spells/Arcane.tres" id="5_buidr"]
+[ext_resource type="Resource" uid="uid://ow325ye5yeev" path="res://Spells/Augment.tres" id="6_0yghl"]
+[ext_resource type="Resource" uid="uid://bdrlp0dwj1r8x" path="res://Spells/Augury.tres" id="7_xs4ah"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0cqie"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_oq1e6"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_5lshn")
+spellbook = Array[Resource("res://Spells/spell_resource.gd")]([ExtResource("2_qf8vj"), ExtResource("3_7q2ie"), ExtResource("4_21bui"), ExtResource("5_buidr"), ExtResource("6_0yghl"), ExtResource("7_xs4ah")])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_0cqie")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("CapsuleMesh_oq1e6")

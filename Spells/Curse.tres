@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dm6txna6wymvx"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_2h3ii"]
+
+[resource]
+script = ExtResource("1_2h3ii")
+Name = "curse"
+Type = 0
+Speed = 1.0

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bncvpdgohbdbx"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_80uop"]
+
+[resource]
+script = ExtResource("1_80uop")
+Name = "disguise"
+Type = 1
+Speed = 1.0

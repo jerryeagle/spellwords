@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dta0t7j33obub"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_aqetb"]
+
+[resource]
+script = ExtResource("1_aqetb")
+Name = "disarm"
+Type = 3
+Speed = 1.0

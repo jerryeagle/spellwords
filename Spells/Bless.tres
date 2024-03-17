@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cla084s1aa1r1"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_wd4kr"]
+
+[resource]
+script = ExtResource("1_wd4kr")
+Name = "bless"
+Type = 2
+Speed = 1.0

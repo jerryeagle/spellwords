@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cakhehkiyjtop"]
+
+[ext_resource type="Script" path="res://Player/character_resource.gd" id="1_ubprp"]
+[ext_resource type="Resource" uid="uid://begadj5rjyyc0" path="res://Spells/Aegis.tres" id="2_b11nr"]
+
+[resource]
+script = ExtResource("1_ubprp")
+health = 100
+spells = Array[Resource("res://Spells/spell_resource.gd")]([ExtResource("2_b11nr")])

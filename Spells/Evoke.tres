@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dkgugejiphemk"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_vhf2d"]
+
+[resource]
+script = ExtResource("1_vhf2d")
+Name = "evoke"
+Type = 0
+Speed = 1.0

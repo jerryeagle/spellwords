@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://xgc025v06d63"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_6tfl7"]
+
+[resource]
+script = ExtResource("1_6tfl7")
+Name = "doom"
+Type = 0
+Speed = 1.0

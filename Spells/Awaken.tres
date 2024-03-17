@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bxpkthorxijk7"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_4qy4q"]
+
+[resource]
+script = ExtResource("1_4qy4q")
+Name = "awaken"
+Type = 2
+Speed = 1.0

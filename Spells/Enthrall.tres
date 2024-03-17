@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://s5lgtuq0cxxp"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_0uxxy"]
+
+[resource]
+script = ExtResource("1_0uxxy")
+Name = "enthrall"
+Type = 3
+Speed = 1.0

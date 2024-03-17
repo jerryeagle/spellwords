@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bdrlp0dwj1r8x"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_r3dhw"]
+
+[resource]
+script = ExtResource("1_r3dhw")
+Name = "augury"
+Type = 3
+Speed = 1.0

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cf3y445ebmvb3"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_ab358"]
+
+[resource]
+script = ExtResource("1_ab358")
+Name = "banish"
+Type = 1
+Speed = 1.0
