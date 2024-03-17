@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://b7lb50nj07xxe"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_u4irk"]
+
+[resource]
+script = ExtResource("1_u4irk")
+Name = "miracle"
+Type = 2
+Speed = 0.0

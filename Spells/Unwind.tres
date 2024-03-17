@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://s1jgxc4nkvp5"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_rhebt"]
+
+[resource]
+script = ExtResource("1_rhebt")
+Name = "unwind"
+Type = 2
+Speed = 0.0

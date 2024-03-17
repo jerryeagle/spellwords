@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://cfvdupej1gg55"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_ikin4"]
+
+[resource]
+script = ExtResource("1_ikin4")
+Name = "zigzag"
+Type = 1
+Speed = 0.0

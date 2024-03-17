@@ -1,4 +1,46 @@
-[gd_scene format=3 uid="uid://d3p0gqm1w3bt2"]
+[gd_scene load_steps=12 format=3 uid="uid://d3p0gqm1w3bt2"]
+
+[ext_resource type="Script" path="res://Spells/Hud.gd" id="1_exqge"]
+[ext_resource type="Texture2D" uid="uid://d4aufi0b8f220" path="res://assets/Success.png" id="2_eir5a"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y72kw"]
+font_size = 32
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jbghl"]
+font_size = 32
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d3ogw"]
+font_size = 32
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_urcai"]
+font_size = 32
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ayren"]
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8d8w7"]
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_j6dg8"]
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2f87l"]
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cbekp"]
+font_size = 100
 
 [node name="Hud" type="Control"]
 layout_mode = 3
@@ -7,6 +49,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_exqge")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -25,24 +68,179 @@ offset_bottom = 40.0
 [node name="HealthLabel" type="Label" parent="ColorRect/HealthContainer"]
 layout_mode = 2
 text = "Health"
+label_settings = SubResource("LabelSettings_y72kw")
 
 [node name="Health" type="Label" parent="ColorRect/HealthContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "100
 "
+label_settings = SubResource("LabelSettings_jbghl")
 
 [node name="EnemyHealthContainer" type="VBoxContainer" parent="ColorRect"]
 layout_mode = 0
-offset_left = 1100.0
+offset_left = 939.0
 offset_top = 3.0
-offset_right = 1152.0
-offset_bottom = 53.0
+offset_right = 1154.0
+offset_bottom = 97.0
 
 [node name="HealthLabel" type="Label" parent="ColorRect/EnemyHealthContainer"]
 layout_mode = 2
-text = "Health"
+text = "Enemy Health"
+label_settings = SubResource("LabelSettings_d3ogw")
 
-[node name="Health" type="Label" parent="ColorRect/EnemyHealthContainer"]
+[node name="EnemyHealth" type="Label" parent="ColorRect/EnemyHealthContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "100
 "
+label_settings = SubResource("LabelSettings_urcai")
+
+[node name="Container" type="Control" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 552.0
+offset_top = 288.0
+offset_right = 652.0
+offset_bottom = 388.0
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/Container"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Up" type="Label" parent="ColorRect/Container"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "U
+"
+label_settings = SubResource("LabelSettings_ayren")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Container2" type="Control" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 651.0
+offset_top = 389.0
+offset_right = 751.0
+offset_bottom = 489.0
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/Container2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Right" type="Label" parent="ColorRect/Container2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "R
+"
+label_settings = SubResource("LabelSettings_8d8w7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Container3" type="Control" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 552.0
+offset_top = 488.0
+offset_right = 652.0
+offset_bottom = 588.0
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/Container3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Down" type="Label" parent="ColorRect/Container3"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "D"
+label_settings = SubResource("LabelSettings_j6dg8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Container4" type="Control" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 448.0
+offset_top = 384.0
+offset_right = 548.0
+offset_bottom = 484.0
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/Container4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Left" type="Label" parent="ColorRect/Container4"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "L"
+label_settings = SubResource("LabelSettings_2f87l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonPad" type="Control" parent="ColorRect"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Current Word" type="Label" parent="ColorRect"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 287.0
+offset_top = 127.0
+offset_right = 920.0
+offset_bottom = 264.0
+text = "current word"
+label_settings = SubResource("LabelSettings_cbekp")
+
+[node name="Indicator" type="TextureRect" parent="ColorRect"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 58.0
+offset_top = 156.0
+offset_right = 277.0
+offset_bottom = 351.0
+texture = ExtResource("2_eir5a")
+expand_mode = 1

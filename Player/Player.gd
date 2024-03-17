@@ -1,7 +1,10 @@
-extends CharacterBody3D
+extends CharacterBody2D
+
+class_name Player
 
 var word: String
 var wordlist: Array[String]
+var health: int
 var trie : TrieNode
 var curr: TrieNode
 var up: String
@@ -10,16 +13,23 @@ var down: String
 var left: String
 var lastMove: String
 
+var no_control = false
+
 var characters = 'abcdefghijklmnopqrstuvwxyz'
 
-signal update_up
-signal update_right
-signal update_down
-signal update_left
+signal update_up(letter: String)
+signal update_right(letter: String)
+signal update_down(letter: String)
+signal update_left(letter: String)
+signal update_health(health: int)
+signal update_word(word: String)
+signal succesful_attack(spell: Spell)
+signal failed_attack(spell: String)
 
 @export var spellbook: Array[Spell]
 
 func _ready():
+	health = 100
 	trie = TrieNode.new("")
 	for i in spellbook:
 		wordlist.append(i.Name)
@@ -28,23 +38,20 @@ func _ready():
 	start_attack()
 	print("")
 	print_directions()
+	health = 50
+	_update_health()
 	
 func create_tree():
-	#print("Creating Tree")
 	for i in range(spellbook.size()):
 		curr = trie
-		#trie.print_next()
-		#print("i is " + str(i))
 		for j in range(0,spellbook[i].Name.length()):
 			if curr.contains(spellbook[i].Name[j]):
 				curr = curr.next_of(spellbook[i].Name[j])
 				continue
 			else:
-				#print("Appending new TrieNode for " + spellbook[i].Name[j])
 				curr.Next.append(TrieNode.new(spellbook[i].Name[j]))
 				curr = curr.next_of(spellbook[i].Name[j])
 			spellbook[i].Name[j]
-		#print(spellbook[i].Name)
 
 func start_attack():
 	curr = trie
@@ -54,19 +61,35 @@ func start_attack():
 	right = possible.pop_at(randi() % possible.size())
 	down = possible.pop_at(randi() % possible.size())
 	left = possible.pop_at(randi() % possible.size())
+	_update_buttons()
+	
+func _update_buttons():
+	if lastMove != "up":
+		emit_signal("update_up", up)
+	if lastMove != "right":
+		emit_signal("update_right", right)	
+	if lastMove != "down":
+		emit_signal("update_down", down)
+	if lastMove != "left":
+		emit_signal("update_left", left)
 		
+func _update_health():
+	print("emitting Health")
+	update_health.emit(health)
+
+func _update_word():
+	update_word.emit(word)
+
 func next_attack():
 	pass
 	
-func attack(attack: Spell):
-	print("Attacking!: " + attack.Name)
+func _attack(attack: Spell):
+	succesful_attack.emit(attack)
 	
-func fail_attack():
-	print("failed to find a word!!!")
+func _fail_attack():
+	failed_attack.emit(word)
 	
 func print_directions():
-	print("")
-	print(word)
 	if lastMove != "up":
 		print("up: " + up)
 	if lastMove != "right":
@@ -82,7 +105,7 @@ func _input(event):
 			return
 		lastMove = "up"
 		if curr.next_letters().size() == 0:
-			fail_attack()
+			_fail_attack()
 			return
 		curr = curr.next_of(up)
 		word = word + up
@@ -99,17 +122,13 @@ func _input(event):
 			left = possible.pop_at(randi() % possible.size())
 		else:
 			left = characters[randi()% characters.length()]
-
-		print_directions()
-		if(wordlist.find(word) != -1):
-			attack(spellbook[wordlist.find(word)])
-		pass
+		
 	if(event.is_action_pressed("right")):
 		if lastMove == "right":
 			return
 		lastMove = "right"
 		if curr.next_letters().size() == 0:
-			fail_attack()
+			_fail_attack()
 			return
 		curr = curr.next_of(right)
 		word = word + right
@@ -126,17 +145,13 @@ func _input(event):
 			left = possible.pop_at(randi() % possible.size())
 		else:
 			left = characters[randi()% characters.length()]
-
-		print_directions()
-		if(wordlist.find(word) != -1):
-			attack(spellbook[wordlist.find(word)])
-		pass
+		
 	if(event.is_action_pressed("down")):
 		if lastMove == "down":
 			return
 		lastMove = "down"
 		if curr.next_letters().size() == 0:
-			fail_attack()
+			_fail_attack()
 			return
 		curr = curr.next_of(down)
 		word = word + down
@@ -153,17 +168,13 @@ func _input(event):
 			left = possible.pop_at(randi() % possible.size())
 		else:
 			left = characters[randi()% characters.length()]
-
-		print_directions()
-		if(wordlist.find(word) != -1):
-			attack(spellbook[wordlist.find(word)])
-		pass
+		
 	if(event.is_action_pressed("left")):
 		if lastMove == "left":
 			return
 		lastMove = "left"
 		if curr.next_letters().size() == 0:
-			fail_attack()
+			_fail_attack()
 			return
 		curr = curr.next_of(left)
 		word = word + left
@@ -181,8 +192,9 @@ func _input(event):
 		else:
 			up = characters[randi()% characters.length()]
 
-		print_directions()
-		if(wordlist.find(word) != -1):
-			attack(spellbook[wordlist.find(word)])
-		pass	
-	pass
+	if(wordlist.find(word) != -1):
+		_attack(spellbook[wordlist.find(word)])
+		
+	_update_word()
+	_update_buttons()	
+	
