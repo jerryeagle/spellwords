@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://b5b0f1ty5lijp"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_re4n5"]
+
+[resource]
+script = ExtResource("1_re4n5")
+Name = "parry"
+Type = 3
+Speed = 0.0

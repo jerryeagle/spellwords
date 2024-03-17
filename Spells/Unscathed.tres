@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://cngvw4wqad8w2"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_na1n5"]
+
+[resource]
+script = ExtResource("1_na1n5")
+Name = "unscathed"
+Type = 1
+Speed = 0.0

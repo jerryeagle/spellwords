@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://dfsymbvj13aje"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_p34mi"]
+
+[resource]
+script = ExtResource("1_p34mi")
+Name = "vigilant"
+Type = 1
+Speed = 0.0
