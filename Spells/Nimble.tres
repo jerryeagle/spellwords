@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://c823f6ma0flrv"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_bce1q"]
+
+[resource]
+script = ExtResource("1_bce1q")
+Name = "nimble"
+Type = 3
+Speed = 0.0

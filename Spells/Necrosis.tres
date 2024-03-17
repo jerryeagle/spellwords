@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://bcghjtji4kncq"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_mwbl0"]
+
+[resource]
+script = ExtResource("1_mwbl0")
+Name = "necrosis"
+Type = 0
+Speed = 0.0

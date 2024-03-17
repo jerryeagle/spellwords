@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://ds1miqlk7x7cy"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_2758s"]
+
+[resource]
+script = ExtResource("1_2758s")
+Name = "tonic"
+Type = 2
+Speed = 0.0

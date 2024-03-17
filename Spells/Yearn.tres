@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://disqdv88b1i0w"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_uc7ea"]
+
+[resource]
+script = ExtResource("1_uc7ea")
+Name = "yearn"
+Type = 2
+Speed = 0.0

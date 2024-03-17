@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://ec7qn2ep5bqg"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_1dess"]
+
+[resource]
+script = ExtResource("1_1dess")
+Name = "kindle"
+Type = 0
+Speed = 0.0
