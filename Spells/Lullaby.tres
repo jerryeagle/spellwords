@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://vex4gvyjiie8"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_ejo6f"]
+
+[resource]
+script = ExtResource("1_ejo6f")
+Name = "lullaby"
+Type = 2
+Speed = 0.0

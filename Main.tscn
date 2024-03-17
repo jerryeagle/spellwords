@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://bylh816vwv1p0"]
+[gd_scene load_steps=50 format=3 uid="uid://bylh816vwv1p0"]
 
 [ext_resource type="PackedScene" uid="uid://bdao338aokecr" path="res://Player/Player.tscn" id="1_rrk0d"]
 [ext_resource type="Resource" uid="uid://begadj5rjyyc0" path="res://Spells/Aegis.tres" id="2_cdjwj"]
@@ -44,8 +44,13 @@
 [ext_resource type="Resource" uid="uid://ba3vqoi8438t1" path="res://Spells/Erupt.tres" id="42_1x4r1"]
 [ext_resource type="Resource" uid="uid://dkgugejiphemk" path="res://Spells/Evoke.tres" id="43_mbgyi"]
 [ext_resource type="Resource" uid="uid://bp0utrrtx285v" path="res://Spells/Fight.tres" id="44_hotod"]
+[ext_resource type="Resource" uid="uid://dj7wdswwmxvx7" path="res://Spells/Freeze.tres" id="45_ov15b"]
+[ext_resource type="Resource" uid="uid://ytq5ysxbomon" path="res://Spells/Fireball.tres" id="46_7k1e7"]
+[ext_resource type="Resource" uid="uid://b411e0kwaebx8" path="res://Spells/Fly.tres" id="47_itgiy"]
+[ext_resource type="Resource" uid="uid://byo6rue3erjll" path="res://Spells/Fracture.tres" id="48_p28uw"]
+[ext_resource type="Resource" uid="uid://d0dlnjkf8aq2d" path="res://Spells/Feast.tres" id="49_e48mq"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_rrk0d")]
-spellbook = Array[Resource("res://Spells/spell_resource.gd")]([ExtResource("2_cdjwj"), ExtResource("3_5kvfa"), ExtResource("4_h26x4"), ExtResource("5_w1mf1"), ExtResource("6_hybpn"), ExtResource("7_a0tm5"), ExtResource("8_coxug"), ExtResource("9_7i627"), ExtResource("10_8dp6m"), ExtResource("11_y8bc2"), ExtResource("12_2uuxg"), ExtResource("13_pwixb"), ExtResource("14_dbg2q"), ExtResource("15_oel8h"), ExtResource("16_sfcaw"), ExtResource("17_wml7w"), ExtResource("18_p485c"), ExtResource("19_cou10"), ExtResource("20_jwcw5"), ExtResource("21_qxtgq"), ExtResource("22_gb5bo"), ExtResource("23_rr470"), ExtResource("24_t0knw"), ExtResource("25_tayfx"), ExtResource("26_xti5s"), ExtResource("27_dye5j"), ExtResource("28_day3r"), ExtResource("29_8b8im"), ExtResource("30_lftau"), ExtResource("31_7ba1g"), ExtResource("32_vmv0m"), ExtResource("33_l3adp"), ExtResource("34_uvpnf"), ExtResource("35_ddiax"), ExtResource("36_tbuyo"), ExtResource("37_hr33q"), ExtResource("38_kjgp2"), ExtResource("39_wqxen"), ExtResource("40_jilrt"), ExtResource("41_nv24f"), ExtResource("42_1x4r1"), ExtResource("43_mbgyi"), ExtResource("44_hotod")])
+spellbook = Array[Resource("res://Spells/spell_resource.gd")]([ExtResource("2_cdjwj"), ExtResource("3_5kvfa"), ExtResource("4_h26x4"), ExtResource("5_w1mf1"), ExtResource("6_hybpn"), ExtResource("7_a0tm5"), ExtResource("8_coxug"), ExtResource("9_7i627"), ExtResource("10_8dp6m"), ExtResource("11_y8bc2"), ExtResource("12_2uuxg"), ExtResource("13_pwixb"), ExtResource("14_dbg2q"), ExtResource("15_oel8h"), ExtResource("16_sfcaw"), ExtResource("17_wml7w"), ExtResource("18_p485c"), ExtResource("19_cou10"), ExtResource("20_jwcw5"), ExtResource("21_qxtgq"), ExtResource("22_gb5bo"), ExtResource("23_rr470"), ExtResource("24_t0knw"), ExtResource("25_tayfx"), ExtResource("26_xti5s"), ExtResource("27_dye5j"), ExtResource("28_day3r"), ExtResource("29_8b8im"), ExtResource("30_lftau"), ExtResource("31_7ba1g"), ExtResource("32_vmv0m"), ExtResource("33_l3adp"), ExtResource("34_uvpnf"), ExtResource("35_ddiax"), ExtResource("36_tbuyo"), ExtResource("37_hr33q"), ExtResource("38_kjgp2"), ExtResource("39_wqxen"), ExtResource("40_jilrt"), ExtResource("41_nv24f"), ExtResource("42_1x4r1"), ExtResource("43_mbgyi"), ExtResource("44_hotod"), ExtResource("45_ov15b"), ExtResource("46_7k1e7"), ExtResource("47_itgiy"), ExtResource("48_p28uw"), ExtResource("49_e48mq")])

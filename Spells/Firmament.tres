@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://cqjn64ob7yas3"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_vkpb0"]
+
+[resource]
+script = ExtResource("1_vkpb0")
+Name = "firmament"
+Type = 1
+Speed = 0.0

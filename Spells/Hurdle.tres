@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://bhg7pi836wleb"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_kope7"]
+
+[resource]
+script = ExtResource("1_kope7")
+Name = "hurdle"
+Type = 3
+Speed = 0.0
