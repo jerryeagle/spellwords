@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://j76kl1funp21"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_xcdxg"]
+
+[resource]
+script = ExtResource("1_xcdxg")
+Name = "pyroblast"
+Type = 0
+Speed = 0.0

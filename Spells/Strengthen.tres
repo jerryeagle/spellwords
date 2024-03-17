@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://g1y36nyqbwkt"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_cqelc"]
+
+[resource]
+script = ExtResource("1_cqelc")
+Name = "strengthen"
+Type = 2
+Speed = 0.0

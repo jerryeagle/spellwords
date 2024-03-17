@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://bfb5fpcnetsfp"]
+
+[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_262rl"]
+
+[resource]
+script = ExtResource("1_262rl")
+Name = "juvenate"
+Type = 2
+Speed = 0.0
