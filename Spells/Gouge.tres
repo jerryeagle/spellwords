@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://btngxugjf1ucq"]
 
-[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_0f2fd"]
+[ext_resource type="Script" path="res://Player/spell_resource.gd" id="1_0f2fd"]
 
 [resource]
 script = ExtResource("1_0f2fd")

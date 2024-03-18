@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bylh816vwv1p0"]
+
+[ext_resource type="Texture2D" uid="uid://cluur08uwwa8s" path="res://assets/background1.png" id="2_1sjbr"]
+[ext_resource type="Script" path="res://Player/Game.gd" id="2_l6mid"]
+[ext_resource type="PackedScene" uid="uid://bdao338aokecr" path="res://Player/Player.tscn" id="3_bw4cm"]
+[ext_resource type="PackedScene" uid="uid://bbina3p75763i" path="res://Player/Enemy.tscn" id="5_g6vwa"]
+[ext_resource type="PackedScene" uid="uid://d3p0gqm1w3bt2" path="res://Player/Hud.tscn" id="47_6hodm"]
+
+[node name="Parent" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1162.0
+offset_bottom = 654.0
+texture = ExtResource("2_1sjbr")
+stretch_mode = 6
+
+[node name="Game" type="Node2D" parent="." node_paths=PackedStringArray("player", "hud", "enemy")]
+script = ExtResource("2_l6mid")
+player = NodePath("../Player")
+hud = NodePath("../Hud")
+enemy = NodePath("../Enemy")
+
+[node name="Hud" parent="." instance=ExtResource("47_6hodm")]
+
+[node name="Player" parent="." instance=ExtResource("3_bw4cm")]
+position = Vector2(-75, 70)
+
+[node name="Enemy" parent="." instance=ExtResource("5_g6vwa")]
+position = Vector2(30, -6)

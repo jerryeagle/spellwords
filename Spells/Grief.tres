@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://d212bg6xsw6ac"]
+
+[ext_resource type="Script" path="res://Player/spell_resource.gd" id="1_3n42w"]
+
+[resource]
+script = ExtResource("1_3n42w")
+Name = "grief"
+Type = 0
+Speed = 0.0

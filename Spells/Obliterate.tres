@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://dg4js08sdb7mq"]
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://crekh8xqevms5"]
 
-[ext_resource type="Script" path="res://Spells/spell_resource.gd" id="1_6jh4f"]
+[ext_resource type="Script" path="res://Player/spell_resource.gd" id="1_6jh4f"]
 
 [resource]
 script = ExtResource("1_6jh4f")
-Name = "Obliterate"
+Name = "obliterate"
 Type = 0
 Speed = 0.0
