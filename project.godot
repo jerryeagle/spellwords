@@ -10,10 +10,17 @@ config_version=5
 
 [application]
 
-config/name="WordWeaver"
-run/main_scene="res://Player/Game.tscn"
+config/name="Spell Casters"
+config/version="1.0"
+run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(1, 1, 1, 1)
+boot_splash/image="res://assets/player1Happy.png"
+config/icon="res://assets/player1Happy.png"
+
+[display]
+
+window/size/resizable=false
 
 [input]
 

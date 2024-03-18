@@ -14,13 +14,14 @@ signal next_level(level: int)
 
 func _ready():
 	_diff_setting = 0
-	level_up()
 	health = _diff_setting * 15
 	spellbook = []
 	var spellResources = get_all_file_paths("res://Spells/")
 	for i in spellResources:
 		spellbook.append(load(i))	
 	update_health.emit(health)
+	level_up()
+
 
 func _attack():
 	if(randi() % 6 < _diff_setting):

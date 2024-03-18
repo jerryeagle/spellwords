@@ -14,6 +14,9 @@ var left: String
 var lastMove: String
 var spellResources: Array[String]
 
+var charup = load("res://assets/player1u.png") 
+@onready var mysprite = $CollisionShape2D/Sprite
+
 var no_control = false
 
 var characters = 'abcdefghijklmnopqrstuvwxyz'
@@ -35,6 +38,7 @@ signal failed_attack(spell: String)
 var spellbook: Array[Spell]
 
 func _ready():
+	print("ready")
 	health = 100
 	spellbook = []
 	spellResources = get_all_file_paths("res://Spells/")
@@ -47,6 +51,7 @@ func _ready():
 	create_tree()
 	start_attack()
 	_update_health()
+
 	
 func create_tree():
 	for i in range(spellbook.size()):

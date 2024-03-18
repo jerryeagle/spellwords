@@ -1,9 +1,5 @@
 extends Node2D
 ## The Game class serves to connect the player, enemy, and hud objects.
-##
-##
-##
-
 
 class_name Game
 

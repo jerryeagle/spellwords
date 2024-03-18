@@ -17,6 +17,13 @@ class_name Hud
 @onready var enemyIndicator = %EnemyIndicator
 @onready var levelbackground = %LevelBackground
 @onready var levellabel = %LevelLabel
+@onready var player1happy = $"../Player1Happy"
+@onready var player1sad = $"../Player1Sad"
+@onready var player2happy = $"../Player2Happy"
+@onready var player2sad = $"../Player2Sad"
+@onready var deflect = $"../Deflect"
+@onready var tutorialtext = $ColorRect/tutorialtext
+
 
 var blinkcount: int
 var blinktimer: float
@@ -31,12 +38,21 @@ signal tell_player_next_level()
 signal ready_for_enemy_attack()
 
 func _ready():
+	levelbackground.show()
+	levellabel.hide()
+	indicator.hide()
+	enemyIndicator.hide()
+	tutorialtext.show()
+	await get_tree().create_timer(7).timeout
+	tutorialtext.hide()
 	levelbackground.hide()
 	indicator.hide()
 	enemyIndicator.hide()
 	blinkcount = 4
 	blinktimer = 0.33
-	print(upButtonRect)
+	_on_next_level(1)
+
+
 
 func _on_update_player_health(new_health:int) -> void:
 	if new_health < 0:
@@ -68,18 +84,22 @@ func _on_update_word(word: String) -> void:
 	currentWord.text = word
 	
 func _on_select_up() -> void:
+	deflect.play()
 	reset_buttons()
 	upButtonRect.set_color(Color(255,0,0,255))
 	
 func _on_select_right() -> void:
+	deflect.play()
 	reset_buttons()
 	rightButtonRect.set_color(Color(255,0,0,255))
 	
 func _on_select_down() -> void:
+	deflect.play()
 	reset_buttons()
 	downButtonRect.set_color(Color(255,0,0,255))
 	
 func _on_select_left() -> void:
+	deflect.play()
 	reset_buttons()
 	leftButtonRect.set_color(Color(255,0,0,255))
 
@@ -91,24 +111,28 @@ func reset_buttons() -> void:
 
 
 func _on_successful_attack(spell: Spell) -> void:
+	player1happy.play()
 	indicator.texture = ResourceLoader.load("res://assets/Success.png")
 	deal_damage.emit(spell.Name.length() * 3)
 	blink_indicator()
 	pass
 	
 func _on_failed_attack(word: String) -> void:
+	player1sad.play()
 	indicator.texture = ResourceLoader.load("res://assets/Fail.png")
 	take_damage.emit(5)
 	blink_indicator()
 	pass
 
 func _on_successful_enemy_attack(spell: Spell) -> void:
+	player2happy.play()
 	_on_update_word(spell.Name)
 	enemyIndicator.texture = ResourceLoader.load("res://assets/Success.png")
 	take_damage.emit(spell.Name.length() * 3)
 	blink_enemy_indicator()
 	
 func _on_failed_enemy_attack() -> void:
+	player2sad.play()
 	_on_update_word("?????")
 	enemyIndicator.texture = ResourceLoader.load("res://assets/Fail.png")
 	deal_damage.emit(5)
@@ -131,6 +155,7 @@ func blink_enemy_indicator():
 	ready_for_attack.emit()
 
 func _on_next_level(level: int):
+	print("level:" + str(level))
 	levelbackground.show()
 	levellabel.text = "Level " + str(level)
 	levellabel.show()

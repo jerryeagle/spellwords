@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d3p0gqm1w3bt2"]
+[gd_scene load_steps=14 format=3 uid="uid://d3p0gqm1w3bt2"]
 
 [ext_resource type="Script" path="res://Player/Hud.gd" id="1_exqge"]
 [ext_resource type="Texture2D" uid="uid://d4aufi0b8f220" path="res://assets/Success.png" id="2_eir5a"]
@@ -47,6 +47,10 @@ font_color = Color(0, 0, 0, 1)
 font_size = 100
 outline_size = 16
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bdlfh"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
 
 [node name="Hud" type="Control"]
 layout_mode = 3
@@ -251,7 +255,7 @@ offset_right = 942.0
 offset_bottom = 464.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Level: 1"
+text = "Level: nil"
 label_settings = SubResource("LabelSettings_sfmtn")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -263,7 +267,6 @@ offset_left = 287.0
 offset_top = 127.0
 offset_right = 920.0
 offset_bottom = 264.0
-text = "current word"
 label_settings = SubResource("LabelSettings_cbekp")
 
 [node name="Indicator" type="TextureRect" parent="ColorRect"]
@@ -285,3 +288,13 @@ offset_right = 1109.0
 offset_bottom = 351.0
 texture = ExtResource("2_eir5a")
 expand_mode = 1
+
+[node name="tutorialtext" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 145.0
+offset_right = 743.0
+offset_bottom = 457.0
+text = "Press the arrow keys on your keyboard that correspond to the d-pad on the screen. Spell a word, to cast your spell. If you fail to spell a word, you will take 5 damage."
+label_settings = SubResource("LabelSettings_bdlfh")
+autowrap_mode = 2

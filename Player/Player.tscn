@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bdao338aokecr"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_5lshn"]
-[ext_resource type="Texture2D" uid="uid://0opmxwq13nlb" path="res://assets/Player.png" id="8_spvf8"]
+[ext_resource type="Texture2D" uid="uid://cecvhktopgdlo" path="res://assets/player1R.png" id="2_jdnrq"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_5lshn")
@@ -9,7 +9,7 @@ script = ExtResource("1_5lshn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="Sprite" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(230, 366)
-scale = Vector2(0.222555, 0.222555)
-texture = ExtResource("8_spvf8")
+position = Vector2(199, 390)
+scale = Vector2(3.3144, 3.3144)
+texture = ExtResource("2_jdnrq")
 flip_h = true
