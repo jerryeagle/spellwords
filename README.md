@@ -5,7 +5,7 @@ Running the program:
 1. Download Godot 4.2.1
 2. Download Zip file
 3. Open project file
-4. Select play button at the top to play game
+4. Select play button at the top right to play game
 5. Use arrow keys to spell a word from the Spellbook (words that can be used to attack, block, deflect, or heal)
 
 Controls: Up, Down, Left, and Right arrow keys
