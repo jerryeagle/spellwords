@@ -7,8 +7,10 @@ extends Node2D
 
 class_name Game
 
-@export var player : Player
+
 @export var hud: Hud
+@export var player : Player
+
 
 
 func _ready():

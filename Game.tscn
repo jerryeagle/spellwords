@@ -56,10 +56,10 @@ offset_bottom = 654.0
 texture = ExtResource("2_1sjbr")
 stretch_mode = 6
 
-[node name="Node" type="Node2D" parent="." node_paths=PackedStringArray("player", "hud")]
+[node name="Node" type="Node2D" parent="." node_paths=PackedStringArray("hud", "player")]
 script = ExtResource("1_8jnit")
-player = NodePath("../Player")
 hud = NodePath("../Hud")
+player = NodePath("../Player")
 
 [node name="Hud" parent="." instance=ExtResource("47_6hodm")]
 
